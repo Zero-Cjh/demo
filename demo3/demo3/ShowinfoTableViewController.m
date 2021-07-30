@@ -28,7 +28,7 @@
     self.tableView.rowHeight = 100;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.userArray.count;
