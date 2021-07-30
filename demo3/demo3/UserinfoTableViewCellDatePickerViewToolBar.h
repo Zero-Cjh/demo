@@ -9,4 +9,7 @@
 
 @interface UserinfoTableViewCellDatePickerViewToolBar : UIToolbar
 
+@property (nonatomic) void(^sureButtonBlock)(void);
+@property (nonatomic) void(^todayButtonBlock)(void);
+
 @end

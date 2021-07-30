@@ -26,7 +26,6 @@
     }
     return self;
 }
-
 - (UIBarButtonItem *)todayButton{
     if (!_todayButton) {
         _todayButton = [[UIBarButtonItem alloc] initWithTitle:@"今天" style:UIBarButtonItemStyleDone target:self action:nil];

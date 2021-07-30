@@ -69,11 +69,12 @@
 - (UserinfoTableViewCellDatePickerView *)userinfoTableViewCellDatePickerView{
     if (!_userinfoTableViewCellDatePickerView) {
         _userinfoTableViewCellDatePickerView = [[UserinfoTableViewCellDatePickerView alloc]initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, 344)];
-        [_userinfoTableViewCellDatePickerView configUI];
         __weak typeof (self) weakself = self;
         _userinfoTableViewCellDatePickerView.DateBlock = ^(NSString *date) {
             weakself.input.text = date;
         };
+        [_userinfoTableViewCellDatePickerView configUI];
+        [_userinfoTableViewCellDatePickerView pickDate];
     }
     return _userinfoTableViewCellDatePickerView;
 }

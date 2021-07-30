@@ -11,7 +11,7 @@
 @interface UserinfoTableViewCellDatePickerView : UIPickerView<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property (nonatomic,copy) void(^DateBlock)(NSString *date);
--(void)configUI;
-
+- (void)configUI;
+- (void)pickDate;
 @end
 
