@@ -50,14 +50,12 @@
     [self.navigationController pushViewController:self.userinfoTableViewController animated:YES];
 }
 - (UserinfoTableViewController *)userinfoTableViewController{
-    if (!_userinfoTableViewController) {
-        _userinfoTableViewController = [[UserinfoTableViewController alloc]init];
-        __weak typeof(self) weakself = self;
-        _userinfoTableViewController.userlogonBlock = ^(Person *person) {
-            [weakself.userArray addObject:person];
-            [weakself.tableView reloadData];
-        };
-    }
+    _userinfoTableViewController = [[UserinfoTableViewController alloc]init];
+    __weak typeof(self) weakself = self;
+    _userinfoTableViewController.userlogonBlock = ^(Person *person) {
+        [weakself.userArray addObject:person];
+        [weakself.tableView reloadData];
+    };
     return _userinfoTableViewController;
 }
 - (NSMutableArray *)userArray{
