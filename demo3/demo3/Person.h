@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Date.h"
+#import "BirthDate.h"
 @interface Person : NSObject
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *gender;
-@property (nonatomic) Date *data;
+@property (nonatomic) BirthDate *birthDate;
 
 @end
 

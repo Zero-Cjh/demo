@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Date : NSObject
+@interface BirthDate : NSObject
 @property (nonatomic) NSInteger year;
 @property (nonatomic) NSInteger month;
 @property (nonatomic) NSInteger day;

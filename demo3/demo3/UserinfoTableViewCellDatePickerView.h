@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Date.h"
+#import "BirthDate.h"
 #import <Masonry.h>
 @interface UserinfoTableViewCellDatePickerView : UIPickerView<UIPickerViewDelegate,UIPickerViewDataSource>
 
-@property (nonatomic,copy) void(^DateBlock)(Date *date);
+@property (nonatomic,copy) void(^BirthDateBlock)(BirthDate *BirthDate);
 - (void)configUI;
 - (void)pickDate;
 - (void)skiptoday;

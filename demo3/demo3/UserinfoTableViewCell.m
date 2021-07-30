@@ -70,8 +70,8 @@
     if (!_userinfoTableViewCellDatePickerView) {
         _userinfoTableViewCellDatePickerView = [[UserinfoTableViewCellDatePickerView alloc]initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, 344)];
         __weak typeof (self) weakself = self;
-        _userinfoTableViewCellDatePickerView.DateBlock = ^(Date *date) {
-            weakself.input.text = [NSString stringWithFormat:@"%ld/%ld/%ld",date.year,date.month,date.day];
+        _userinfoTableViewCellDatePickerView.BirthDateBlock = ^(BirthDate *birthDate) {
+            [weakself.input setText:[NSString stringWithFormat:@"%ld/%02ld/%02ld",birthDate.year,birthDate.month,birthDate.day]];
         };
         [_userinfoTableViewCellDatePickerView configUI];
         [_userinfoTableViewCellDatePickerView pickDate];

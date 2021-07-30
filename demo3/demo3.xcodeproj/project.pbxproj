@@ -16,8 +16,9 @@
 		1065B41F26B28A6C00EC3307 /* demo3UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065B41E26B28A6C00EC3307 /* demo3UITests.m */; };
 		1065B42E26B28E6600EC3307 /* UserinfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065B42D26B28E6600EC3307 /* UserinfoTableViewController.m */; };
 		1065B43426B28FB500EC3307 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065B43326B28FB500EC3307 /* Person.m */; };
-		1065B43726B28FDB00EC3307 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065B43626B28FDB00EC3307 /* Date.m */; };
+		1065B43726B28FDB00EC3307 /* BirthDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065B43626B28FDB00EC3307 /* BirthDate.m */; };
 		1065B43A26B2938E00EC3307 /* UserinfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065B43926B2938E00EC3307 /* UserinfoTableViewCell.m */; };
+		10B770BA26B3CDC50032BA22 /* ShowinfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B770B926B3CDC50032BA22 /* ShowinfoTableViewController.m */; };
 		3139460E693D640B98DB55AE /* libPods-demo3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB64B1D55CEFD72C02BCBF /* libPods-demo3.a */; };
 /* End PBXBuildFile section */
 
@@ -59,10 +60,12 @@
 		1065B42D26B28E6600EC3307 /* UserinfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserinfoTableViewController.m; sourceTree = "<group>"; };
 		1065B43226B28FB500EC3307 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		1065B43326B28FB500EC3307 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		1065B43526B28FDB00EC3307 /* Date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
-		1065B43626B28FDB00EC3307 /* Date.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
+		1065B43526B28FDB00EC3307 /* BirthDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirthDate.h; sourceTree = "<group>"; };
+		1065B43626B28FDB00EC3307 /* BirthDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirthDate.m; sourceTree = "<group>"; };
 		1065B43826B2938E00EC3307 /* UserinfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserinfoTableViewCell.h; sourceTree = "<group>"; };
 		1065B43926B2938E00EC3307 /* UserinfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserinfoTableViewCell.m; sourceTree = "<group>"; };
+		10B770B826B3CDC50032BA22 /* ShowinfoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowinfoTableViewController.h; sourceTree = "<group>"; };
+		10B770B926B3CDC50032BA22 /* ShowinfoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowinfoTableViewController.m; sourceTree = "<group>"; };
 		C2B40DE08E91162571D942E9 /* Pods-demo3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo3.release.xcconfig"; path = "Target Support Files/Pods-demo3/Pods-demo3.release.xcconfig"; sourceTree = "<group>"; };
 		CCD2A79E5263D170D1A0255F /* Pods-demo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo3.debug.xcconfig"; path = "Target Support Files/Pods-demo3/Pods-demo3.debug.xcconfig"; sourceTree = "<group>"; };
 		F9BB64B1D55CEFD72C02BCBF /* libPods-demo3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,8 +155,8 @@
 		1065B42F26B28E6900EC3307 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1065B42C26B28E6600EC3307 /* UserinfoTableViewController.h */,
-				1065B42D26B28E6600EC3307 /* UserinfoTableViewController.m */,
+				10B770B726B3CD5C0032BA22 /* showinfo */,
+				10B770B626B3CD500032BA22 /* logon */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -161,12 +164,7 @@
 		1065B43026B28E7D00EC3307 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1065B43826B2938E00EC3307 /* UserinfoTableViewCell.h */,
-				1065B43926B2938E00EC3307 /* UserinfoTableViewCell.m */,
-				1037463026B29A6C00FA86AE /* UserinfoTableViewCellDatePickerView.h */,
-				1037463126B29A6C00FA86AE /* UserinfoTableViewCellDatePickerView.m */,
-				1037463326B2BAD800FA86AE /* UserinfoTableViewCellDatePickerViewToolBar.h */,
-				1037463426B2BAD800FA86AE /* UserinfoTableViewCellDatePickerViewToolBar.m */,
+				10B770B526B3CCFC0032BA22 /* logon */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -176,10 +174,41 @@
 			children = (
 				1065B43226B28FB500EC3307 /* Person.h */,
 				1065B43326B28FB500EC3307 /* Person.m */,
-				1065B43526B28FDB00EC3307 /* Date.h */,
-				1065B43626B28FDB00EC3307 /* Date.m */,
+				1065B43526B28FDB00EC3307 /* BirthDate.h */,
+				1065B43626B28FDB00EC3307 /* BirthDate.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		10B770B526B3CCFC0032BA22 /* logon */ = {
+			isa = PBXGroup;
+			children = (
+				1065B43826B2938E00EC3307 /* UserinfoTableViewCell.h */,
+				1065B43926B2938E00EC3307 /* UserinfoTableViewCell.m */,
+				1037463026B29A6C00FA86AE /* UserinfoTableViewCellDatePickerView.h */,
+				1037463126B29A6C00FA86AE /* UserinfoTableViewCellDatePickerView.m */,
+				1037463326B2BAD800FA86AE /* UserinfoTableViewCellDatePickerViewToolBar.h */,
+				1037463426B2BAD800FA86AE /* UserinfoTableViewCellDatePickerViewToolBar.m */,
+			);
+			name = logon;
+			sourceTree = "<group>";
+		};
+		10B770B626B3CD500032BA22 /* logon */ = {
+			isa = PBXGroup;
+			children = (
+				1065B42C26B28E6600EC3307 /* UserinfoTableViewController.h */,
+				1065B42D26B28E6600EC3307 /* UserinfoTableViewController.m */,
+			);
+			name = logon;
+			sourceTree = "<group>";
+		};
+		10B770B726B3CD5C0032BA22 /* showinfo */ = {
+			isa = PBXGroup;
+			children = (
+				10B770B826B3CDC50032BA22 /* ShowinfoTableViewController.h */,
+				10B770B926B3CDC50032BA22 /* ShowinfoTableViewController.m */,
+			);
+			name = showinfo;
 			sourceTree = "<group>";
 		};
 		445BEAA4F0867B8DADE5B6FC /* Frameworks */ = {
@@ -352,12 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1065B43726B28FDB00EC3307 /* Date.m in Sources */,
+				1065B43726B28FDB00EC3307 /* BirthDate.m in Sources */,
 				1065B3F926B28A6A00EC3307 /* AppDelegate.m in Sources */,
 				1065B43A26B2938E00EC3307 /* UserinfoTableViewCell.m in Sources */,
 				1065B42E26B28E6600EC3307 /* UserinfoTableViewController.m in Sources */,
 				1065B43426B28FB500EC3307 /* Person.m in Sources */,
 				1065B40A26B28A6C00EC3307 /* main.m in Sources */,
+				10B770BA26B3CDC50032BA22 /* ShowinfoTableViewController.m in Sources */,
 				1037463226B29A6C00FA86AE /* UserinfoTableViewCellDatePickerView.m in Sources */,
 				1037463526B2BAD800FA86AE /* UserinfoTableViewCellDatePickerViewToolBar.m in Sources */,
 			);

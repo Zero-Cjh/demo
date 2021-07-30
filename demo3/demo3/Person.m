@@ -8,5 +8,10 @@
 #import "Person.h"
 
 @implementation Person
-
+- (BirthDate *)birthDate{
+    if (!_birthDate) {
+        _birthDate = [[BirthDate alloc]init];
+    }
+    return _birthDate;
+}
 @end

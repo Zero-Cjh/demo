@@ -5,9 +5,9 @@
 //  Created by jin10 on 2021/7/29.
 //
 
-#import "Date.h"
+#import "BirthDate.h"
 
-@implementation Date
+@implementation BirthDate
 
 
 @end

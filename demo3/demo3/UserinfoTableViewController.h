@@ -7,10 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "Person.h"
 
 @interface UserinfoTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-
+@property (nonatomic) void(^userlogonBlock)(Person *person);
 @end
 
-NS_ASSUME_NONNULL_END

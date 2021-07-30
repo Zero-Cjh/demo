@@ -6,25 +6,25 @@
 //
 
 #import "AppDelegate.h"
-#import "UserinfoTableViewController.h"
+#import "ShowinfoTableViewController.h"
 @interface AppDelegate ()
-@property (nonatomic,strong) UserinfoTableViewController *userinfoTableViewController;
+@property (nonatomic,strong) ShowinfoTableViewController *showinfoTableViewController;
 @end
 
 @implementation AppDelegate
 
-- (UserinfoTableViewController *)userinfoTableViewController{
-    if (!_userinfoTableViewController) {
-        _userinfoTableViewController = [[UserinfoTableViewController alloc]init];
+- (ShowinfoTableViewController *)showinfoTableViewController{
+    if (!_showinfoTableViewController) {
+        _showinfoTableViewController = [[ShowinfoTableViewController alloc]init];
     }
-    return _userinfoTableViewController;
+    return _showinfoTableViewController;
 }
 -(void)configWindow{
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.userinfoTableViewController];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.showinfoTableViewController];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
