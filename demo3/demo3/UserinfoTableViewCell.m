@@ -70,8 +70,8 @@
     if (!_userinfoTableViewCellDatePickerView) {
         _userinfoTableViewCellDatePickerView = [[UserinfoTableViewCellDatePickerView alloc]initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, 344)];
         __weak typeof (self) weakself = self;
-        _userinfoTableViewCellDatePickerView.DateBlock = ^(NSString *date) {
-            weakself.input.text = date;
+        _userinfoTableViewCellDatePickerView.DateBlock = ^(Date *date) {
+            weakself.input.text = [NSString stringWithFormat:@"%ld/%ld/%ld",date.year,date.month,date.day];
         };
         [_userinfoTableViewCellDatePickerView configUI];
         [_userinfoTableViewCellDatePickerView pickDate];
@@ -83,6 +83,13 @@
     if (!_userinfoTableViewCellDatePickViewToolBar) {
         _userinfoTableViewCellDatePickViewToolBar = [[UserinfoTableViewCellDatePickerViewToolBar alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
         [_userinfoTableViewCellDatePickViewToolBar setBarStyle:UIBarStyleDefault];
+        __weak typeof (self) weakself = self;
+        _userinfoTableViewCellDatePickViewToolBar.sureButtonBlock = ^{
+            [weakself endEditing:YES];
+        };
+        _userinfoTableViewCellDatePickViewToolBar.todayButtonBlock = ^{
+            [weakself.userinfoTableViewCellDatePickerView skiptoday];
+        };
     }
     return _userinfoTableViewCellDatePickViewToolBar;
 }

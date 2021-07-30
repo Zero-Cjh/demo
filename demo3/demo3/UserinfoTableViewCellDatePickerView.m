@@ -19,12 +19,25 @@
 -(void)configUI{
     self.delegate = self;
     self.dataSource = self;
-    [self date];
+    [self skiptoday];
+    
 }
 - (void)pickDate{
     if (self.DateBlock) {
-        self.DateBlock([NSString stringWithFormat:@"%ld/%ld/%ld",self.date.year,self.date.month,self.date.day]);
+        self.DateBlock(self.date);
     }
+}
+- (void)skiptoday{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init]; //初始化格式器。
+    [formatter setDateFormat:@"YYYY-MM-dd"];//定义时间为这种格式： YYYY-MM-dd hh:mm:ss 。
+    self.date.year = [[[formatter stringFromDate:[NSDate date]] substringToIndex:4] intValue];
+    self.date.month = [[[formatter stringFromDate:[NSDate date]] substringWithRange:NSMakeRange(5,2)] intValue];
+    self.date.day = [[[formatter stringFromDate:[NSDate date]] substringWithRange:NSMakeRange(8,2)] intValue];
+    [self changedaycountwithYear:self.date.year andMonth:self.date.month];
+    [self selectRow:self.date.year-1950 inComponent:0 animated:YES];
+    [self selectRow:self.date.month-1 inComponent:1 animated:YES];
+    [self selectRow:self.date.day-1 inComponent:2 animated:YES];
+    [self pickDate];
 }
 - (void)changedaycountwithYear:(NSInteger)year andMonth:(NSInteger)month{
     switch (month) {
@@ -117,15 +130,7 @@
 - (Date *)date{
     if (!_date) {
         _date = [[Date alloc]init];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init]; //初始化格式器。
-        [formatter setDateFormat:@"YYYY-MM-dd"];//定义时间为这种格式： YYYY-MM-dd hh:mm:ss 。
-        _date.year = [[[formatter stringFromDate:[NSDate date]] substringToIndex:4] intValue];
-        _date.month = [[[formatter stringFromDate:[NSDate date]] substringWithRange:NSMakeRange(5,2)] intValue];
-        _date.day = [[[formatter stringFromDate:[NSDate date]] substringWithRange:NSMakeRange(8,2)] intValue];
-        [self changedaycountwithYear:_date.year andMonth:_date.month];
-        [self selectRow:_date.year-1950 inComponent:0 animated:nil];
-        [self selectRow:_date.month-1 inComponent:1 animated:YES];
-        [self selectRow:_date.day-1 inComponent:2 animated:YES];
+        
     }
     return _date;
 }

@@ -18,6 +18,16 @@
 
 @implementation UserinfoTableViewCellDatePickerViewToolBar
 
+-(void)touchsureButtonaction{
+    if (self.sureButtonBlock) {
+        self.sureButtonBlock();
+    }
+}
+-(void)touchtodayButtonaction{
+    if (self.todayButtonBlock) {
+        self.todayButtonBlock();
+    }
+}
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -28,13 +38,13 @@
 }
 - (UIBarButtonItem *)todayButton{
     if (!_todayButton) {
-        _todayButton = [[UIBarButtonItem alloc] initWithTitle:@"今天" style:UIBarButtonItemStyleDone target:self action:nil];
+        _todayButton = [[UIBarButtonItem alloc] initWithTitle:@"今天" style:UIBarButtonItemStyleDone target:self action:@selector(touchtodayButtonaction)];
     }
     return _todayButton;
 }
 - (UIBarButtonItem *)sureButton{
     if (!_sureButton) {
-        _sureButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:nil];
+        _sureButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(touchsureButtonaction)];
     }
     return _sureButton;
 }

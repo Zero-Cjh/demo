@@ -121,6 +121,7 @@
 			children = (
 				1065B3F726B28A6A00EC3307 /* AppDelegate.h */,
 				1065B3F826B28A6A00EC3307 /* AppDelegate.m */,
+				1065B42F26B28E6900EC3307 /* Controller */,
 				1065B43026B28E7D00EC3307 /* View */,
 				1065B43126B28E8400EC3307 /* Model */,
 				1065B40326B28A6C00EC3307 /* Assets.xcassets */,
@@ -160,7 +161,6 @@
 		1065B43026B28E7D00EC3307 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1065B42F26B28E6900EC3307 /* Controller */,
 				1065B43826B2938E00EC3307 /* UserinfoTableViewCell.h */,
 				1065B43926B2938E00EC3307 /* UserinfoTableViewCell.m */,
 				1037463026B29A6C00FA86AE /* UserinfoTableViewCellDatePickerView.h */,

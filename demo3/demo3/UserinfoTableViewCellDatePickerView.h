@@ -10,8 +10,9 @@
 #import <Masonry.h>
 @interface UserinfoTableViewCellDatePickerView : UIPickerView<UIPickerViewDelegate,UIPickerViewDataSource>
 
-@property (nonatomic,copy) void(^DateBlock)(NSString *date);
+@property (nonatomic,copy) void(^DateBlock)(Date *date);
 - (void)configUI;
 - (void)pickDate;
+- (void)skiptoday;
 @end
 
